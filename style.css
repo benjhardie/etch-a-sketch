@@ -65,7 +65,6 @@ a {
 /* COMPONENTS */
 
 header {
-    border: 2px solid red;
     padding-block: 2vw;
     font-family: var(--ff-accent);
     font-size: var(--fs-4);
