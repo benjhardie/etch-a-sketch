@@ -1,0 +1,32 @@
+@import "./reset.css";
+
+/* DEV SETTINGS */
+/* * {
+    border: 2px solid red;
+} */
+
+/* SETUP */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
