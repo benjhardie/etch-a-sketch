@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Etch-a-Sketch</title>
+        <script
+            src="https://kit.fontawesome.com/d96fb9c1e6.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <h1>Etch-a-Sketch</h1>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="canvas">
+                    <div class="canvas--grid"></div>
+                </div>
+                <div class="tools">
+                    <div class="tools--left">
+                        <div class="slider--container">
+                            <input
+                                type="range"
+                                min="16"
+                                max="100"
+                                value="42"
+                                class="slider"
+                                id="slider"
+                            />
+                            <p class="slider--value" id="slider--value">42</p>
+                        </div>
+                    </div>
+                    <div class="tools--right">
+                        <div class="colour-palette black"></div>
+                        <div class="colour-palette red"></div>
+                        <div class="colour-palette orange"></div>
+                        <div class="colour-palette yellow"></div>
+                        <div class="colour-palette green"></div>
+                        <div class="colour-palette blue"></div>
+                        <svg src="./icons/eraser-solid.svg"></svg>
+                        <svg src="./icons/trash-solid.svg"></svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper"></div>
+            <p>
+                Check out this project on
+                <a href="https://github.com/benjhardie/etch-a-sketch"
+                    >GitHub! <i class="fa-brands fa-github"></i
+                ></a>
+            </p>
+            <p>
+                Copyright <i class="fa-regular fa-copyright"></i> 2024 Benjamin
+                Hardie
+            </p>
+        </footer>
+    </body>
+</html>
