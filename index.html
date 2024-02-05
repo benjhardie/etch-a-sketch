@@ -15,6 +15,7 @@
             src="https://kit.fontawesome.com/d96fb9c1e6.js"
             crossorigin="anonymous"
         ></script>
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <header>
@@ -23,33 +24,54 @@
             </div>
         </header>
         <main>
-            <div class="wrapper">
+            <div class="container">
                 <div class="canvas">
-                    <div class="canvas--grid"></div>
+                    <div class="grid" id="grid"></div>
                 </div>
                 <div class="tools">
-                    <div class="tools--left">
-                        <div class="slider--container">
+                    <div class="tools--color-palette">
+                        <div class="swatch black active"></div>
+                        <div class="swatch red"></div>
+                        <div class="swatch orange"></div>
+                        <div class="swatch yellow"></div>
+                        <div class="swatch green"></div>
+                        <div class="swatch blue"></div>
+                        <div class="swatch multi">
+                            <input
+                                type="color"
+                                id="color-picker"
+                                value="#000000"
+                            />
+                        </div>
+                    </div>
+                    <div class="tools--additional-tools">
+                        <div class="slider-container">
                             <input
                                 type="range"
-                                min="16"
-                                max="100"
-                                value="42"
+                                min="10"
+                                max="80"
+                                value="25"
                                 class="slider"
                                 id="slider"
                             />
-                            <p class="slider--value" id="slider--value">42</p>
+                            <p class="slider-label" id="slider-label">25</p>
                         </div>
-                    </div>
-                    <div class="tools--right">
-                        <div class="colour-palette black"></div>
-                        <div class="colour-palette red"></div>
-                        <div class="colour-palette orange"></div>
-                        <div class="colour-palette yellow"></div>
-                        <div class="colour-palette green"></div>
-                        <div class="colour-palette blue"></div>
-                        <img src="./icons/eraser-solid.svg" />
-                        <img src="./icons/trash-solid.svg" />
+                        <div class="icons">
+                            <div class="icon">
+                                <img
+                                    id="eraser"
+                                    src="./icons/eraser-solid.png"
+                                    alt="eraser"
+                                />
+                            </div>
+                            <div class="icon">
+                                <img
+                                    id="trash"
+                                    src="./icons/trash-solid.png"
+                                    alt="trash"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,5 +90,16 @@
                 </p>
             </div>
         </footer>
+        <div id="modal">
+            <div class="modal-content">
+                <p>
+                    Are you sure? Changing the grid size will reset your canvas.
+                </p>
+                <div class="btn-group" id="btn-group">
+                    <button class="btn" id="cancel-btn">Cancel</button>
+                    <button class="btn" id="okay-btn">Okay</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
