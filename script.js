@@ -8,7 +8,7 @@ const eraser = document.querySelector("#eraser");
 const trash = document.querySelector("#trash");
 const modal = document.querySelector("#modal");
 const btnGroup = document.querySelector("#btn-group");
-let gridSize = slider.value;
+let gridSize = 25;
 let isDrawing = false;
 let color = "#000000";
 
@@ -63,13 +63,11 @@ function draw(target) {
     }
 }
 
-slider.addEventListener("change", () => {
-    currentGridSize = gridSize
-    gridSize = slider.value;
-    sliderLabel.textContent = gridSize;
-
-    confirmChange();
+slider.addEventListener("input", () => {
+    sliderLabel.textContent = slider.value;
 });
+
+slider.addEventListener("change", confirmChange);
 
 function confirmChange() {
     modal.style.display = "flex";
@@ -77,10 +75,17 @@ function confirmChange() {
         target = e.target;
 
         if (target.id === "okay-btn") {
+            modal.style.display = "none";
+            btnGroup.removeEventListener;
+            gridSize = slider.value;
             drawGrid(gridSize);
+            sliderLabel.textContent = gridSize;
+        } else {
+            modal.style.display = "none";
+            btnGroup.removeEventListener;
+            slider.value = gridSize;
+            sliderLabel.textContent = gridSize;
         }
-        modal.style.display = "none";
-        btnGroup.removeEventListener;
     });
 }
 
